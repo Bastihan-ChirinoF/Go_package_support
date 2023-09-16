@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+package ProtocolB;
+
+option go_package= "./";
+
+service response_RMQ {
+ rpc V_Cupos (cupos) returns (interesados) {}
+}
+
+message cupos {
+    int64 betas = 1;
+}
+
+message interesados {
+    int64 restantes = 1;
+}
